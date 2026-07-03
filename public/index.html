@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калкулатор за Гориво</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container fade-in">
+        <header>
+            <h1 id="titleText">Калкулатор за Гориво <span class="material-icons-round">local_gas_station</span></h1>
+            <select id="langSelector" class="lang-selector">
+                <option value="mk" selected>MK</option>
+                <option value="en">EN</option>
+            </select>
+        </header>
+
+        <main>
+            <div class="prices-card slide-up">
+                <h3 id="pricesTitle">Цени во МК 🇲🇰</h3>
+                <div class="price-tags">
+                    <button class="fuel-btn active" data-type="95">
+                        Super 95<br><strong id="price95">...</strong> ден
+                    </button>
+                    <button class="fuel-btn" data-type="98">
+                        Premium 98<br><strong id="price98">...</strong> ден
+                    </button>
+                </div>
+            </div>
+
+            <div class="input-group slide-up delay-1">
+                <label id="lblMk" for="mkdInput">Внеси денари:</label>
+                <div class="input-wrapper">
+                    <span class="material-icons-round">payments</span>
+                    <input type="number" id="mkdInput" placeholder="0" min="0">
+                </div>
+            </div>
+
+            <div class="input-group slide-up delay-2">
+                <label id="lblPrice" for="priceInput">Цена по литар :</label>
+                <div class="input-wrapper">
+                    <span class="material-icons-round">sell</span>
+                    <input type="number" id="priceInput" step="0.5" min="0">
+                </div>
+            </div>
+
+            <div class="input-group slide-up delay-3">
+                <label id="lblDosage" for="dosageInput">Дозирање на масло/адитив (мл по литар):</label>
+                <div class="input-wrapper">
+                    <span class="material-icons-round">water_drop</span>
+                    <input type="number" id="dosageInput" placeholder="пр. 20" min="0">
+                </div>
+            </div>
+
+            <div class="results-card scale-in">
+                <div class="result-row">
+                    <span id="resLitersTitle">Ќе наточиш:</span>
+                    <strong id="resultLiters">0.00 L</strong>
+                </div>
+                <div class="result-row highlight">
+                    <span id="resOilTitle">Потребно масло / адитив:</span>
+                    <strong id="resultOil">0 ml</strong>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
