@@ -9,25 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentPrices = { "95": 0, "98": 0 };
 
-    // Едноставни преводи
     const translations = {
         mk: {
             title: 'Калкулатор за Гориво <span class="material-icons-round">local_gas_station</span>',
-            pricesTitle: 'Цени Gorivo Vo МК',
+            pricesTitle: 'Цени во МК 🇲🇰',
             lblMk: 'Внеси денари:',
             lblPrice: 'Цена по литар :',
             lblDosage: 'Дозирање на масло/адитив (мл по литар):',
             resLitersTitle: 'Ќе наточиш:',
-            resOilTitle: 'Потребно масло / адитив:'
+            resOilTitle: 'Потребно масло / адитив:',
+            footerText: 'Заслуга за идејата: Андреј Бурназов | Код: Петар Ѓоргиевски'
         },
         en: {
             title: 'Fuel Calculator <span class="material-icons-round">local_gas_station</span>',
-            pricesTitle: 'Fuel Prices In MK',
+            pricesTitle: 'MK Prices 🇲🇰',
             lblMk: 'Enter amount (MKD):',
             lblPrice: 'Price per liter:',
             lblDosage: 'Oil/Additive dosage (ml per liter):',
             resLitersTitle: 'You will dispense:',
-            resOilTitle: 'Required oil / additive:'
+            resOilTitle: 'Required oil / additive:',
+            footerText: 'Idea by Andrej Burnazov | Code by Peter Gorgievski'
         }
     };
 
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('lblDosage').innerText = dict.lblDosage;
         document.getElementById('resLitersTitle').innerText = dict.resLitersTitle;
         document.getElementById('resOilTitle').innerText = dict.resOilTitle;
+        document.getElementById('footerText').innerText = dict.footerText;
     });
 
     async function fetchPrices() {
